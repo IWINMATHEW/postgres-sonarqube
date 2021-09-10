@@ -1,7 +1,7 @@
 app:
     name: Postgres Sonarqube
     code: POSTGRESSONARQUBE
-    notify: bkoshy@ecloudcontrol.com
+    notify: imathew@ecloudcontrol.com
     
 build:
     version: 12.2
@@ -11,7 +11,7 @@ build:
     image_template: postgres_master-12.2
     
 deploy:
-    context: bibin-ecloudcontrol/DEV
+    context: IWINMATHEW/DEV
     type: statefulset
     replicas: 1
     port:
@@ -26,7 +26,7 @@ volumes:
     class: microk8s-hostpath    
 
 monitor:
-    notify: bkoshy@ecloudcontrol.com   
+    notify: imathew@ecloudcontrol.com   
     
 properties:
     POSTGRESQL_REPLICATION_MODE: master
@@ -47,4 +47,4 @@ properties:
 
     APPZ_RESTORE_TOKEN: 20210809-1140
     APPZ_LOAD_TOKEN: 20210809-1140
-    revision : 71
+    revision : 72
